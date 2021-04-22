@@ -1,2 +1,1 @@
-# reimbursement_system
-Reimbursement System for Revature
+# Reimbursement System for Revature
