@@ -1,0 +1,14 @@
+#GATEWAY'S CONFIG
+server:
+  port: 0
+spring:
+  application:
+    name: tempservice
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    instance-id:  ${spring.application.name}:${random.value}
