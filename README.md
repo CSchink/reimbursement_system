@@ -52,5 +52,5 @@ Now you may approve or deny those reimbursements.
 * Project_One_DB_username: [DBeaver username]
 * Project_One_DB_password: [AWS_RDS password]
 10. Open up the newly cloned reimbursement_system file in Intellij and run MainDriver.java
-11: Navigate to http://localhost:9001/
+11. Navigate to http://localhost:9001/
 
