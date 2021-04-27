@@ -42,7 +42,7 @@ Now, login as an adminsitrator using the following credentials:
 * username: admin
 * password: 1234
 
-Now you may approve or deny those reimbursements.  As you can see, you may select multiple reimbursements (as long as they are pending):
+Now you may approve or deny those reimbursements.  As you can see, you may select multiple reimbursements (as long as they are pending).
 
 ![image](https://user-images.githubusercontent.com/45950072/116256977-a81b3400-a741-11eb-82c8-876c0ead56f4.png)
 
