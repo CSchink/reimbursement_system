@@ -1,0 +1,85 @@
+DROP TABLE ers_reimbursement CASCADE;
+DROP TABLE ers_reimbursement_status CASCADE;
+DROP TABLE ers_reimbursement_type CASCADE;
+DROP TABLE ers_user_roles CASCADE;
+DROP TABLE ers_users CASCADE;
+
+
+CREATE TABLE ers_user_roles(
+ ers_user_role_id INTEGER PRIMARY KEY 
+ , user_role VARCHAR(10) NOT NULL
+);
+
+INSERT INTO ers_user_roles VALUES(1, 'Employee');
+INSERT INTO ers_user_roles VALUES(2, 'Manager');
+
+CREATE TABLE ers_users(
+
+	ers_users_id INTEGER PRIMARY KEY
+	, ers_username VARCHAR(50) UNIQUE NOT NULL
+	, ers_password VARCHAR(50) NOT NULL
+	, user_first_name VARCHAR(100) NOT NULL
+	, user_last_name VARCHAR(100) NOT NULL
+	, user_email VARCHAR(150) UNIQUE NOT NULL
+	, user_role_id INTEGER NOT NULL
+ 	, FOREIGN KEY (user_role_id) REFERENCES ers_user_roles(ers_user_role_id)
+);
+
+INSERT INTO ers_users VALUES(1, 'user1', '1234', 'John', 'Brantley', 'john@john.com', 1);
+INSERT INTO ers_users VALUES(2, 'franky', '1234', 'Frank', 'Libnitz', 'fdhn@john.com', 1);
+INSERT INTO ers_users VALUES(3, 'jimbo', '1234', 'Seth', 'Meyers', 'jdsftn@john.com', 1);
+INSERT INTO ers_users VALUES(4, 'austinlimit', '1234', 'Frankie', 'JaBrown', '4w34ohn@john.com', 1);
+INSERT INTO ers_users VALUES(5, 'admin', '1234', 'Yusef', 'MadMajazzi', 'laughable@john.com', 2);
+INSERT INTO ers_users VALUES(6, 'user2', '1234', 'John', 'Fandy', 'joeeee@john.com', 1);
+INSERT INTO ers_users VALUES(7, 'trevin', '1234', 'Trevin', 'Chester', 'tchester@superhero.com', 1);
+
+SELECT * FROM ers_users;
+CREATE TABLE ers_reimbursement_status(
+
+	reimb_status_id INTEGER PRIMARY KEY
+	, reimb_status VARCHAR(10) NOT NULL
+	
+);
+
+INSERT INTO ers_reimbursement_status VALUES(1, 'Pending');
+INSERT INTO ers_reimbursement_status VALUES(2, 'Approved');
+INSERT INTO ers_reimbursement_status VALUES(3, 'Denied');
+
+
+
+CREATE TABLE ers_reimbursement_type(
+
+	reimb_type_id INTEGER PRIMARY KEY
+	, reimb_type VARCHAR(10)
+
+);
+
+INSERT INTO ers_reimbursement_type VALUES(1, 'LODGING');
+INSERT INTO ers_reimbursement_type VALUES(2, 'TRAVEL');
+INSERT INTO ers_reimbursement_type VALUES(3, 'FOOD');
+INSERT INTO ers_reimbursement_type VALUES(4, 'OTHER'); 
+
+
+CREATE TABLE ers_reimbursement(
+	
+	reimb_amount NUMERIC(10,2) NOT NULL
+	, reimb_submitted TIMESTAMP NOT NULL
+	, reimb_resolved TIMESTAMP
+	, reimb_receipt bytea 
+	, reimb_author INTEGER NOT NULL
+	, reimb_resolver INTEGER
+	, reimb_status_id INTEGER NOT NULL
+	, reimb_type_id INTEGER NOT NULL
+	, FOREIGN KEY (reimb_author) REFERENCES ers_users(ers_users_id)
+	, FOREIGN KEY (reimb_status_id) REFERENCES ers_reimbursement_status(reimb_status_id)
+	, FOREIGN KEY (reimb_type_id) REFERENCES ers_reimbursement_type(reimb_type_id)
+	, FOREIGN KEY (reimb_resolver) REFERENCES ers_user_roles(ers_user_role_id)
+);
+
+ALTER TABLE ers_reimbursement ADD COLUMN reimb_id SERIAL PRIMARY KEY;
+
+INSERT INTO ers_reimbursement VALUES( 201.50, CURRENT_TIMESTAMP, NULL, NULL, 1, NULL, 1, 1);
+INSERT INTO ers_reimbursement VALUES( 32.21, CURRENT_TIMESTAMP, NULL, NULL, 2, NULL, 1, 3);
+INSERT INTO ers_reimbursement VALUES( 42, CURRENT_TIMESTAMP, NULL, NULL, 3, NULL, 1, 3);
+INSERT INTO ers_reimbursement VALUES( 25, CURRENT_TIMESTAMP, NULL, NULL, 2, NULL, 1, 4);
+INSERT INTO ers_reimbursement VALUES( 12.23, CURRENT_TIMESTAMP, NULL, NULL, 1, NULL, 1, 2);
