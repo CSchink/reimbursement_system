@@ -54,3 +54,5 @@ Now you may approve or deny those reimbursements.
 10. Open up the newly cloned reimbursement_system file in Intellij and run MainDriver.java
 11. Navigate to http://localhost:9001/
 
+## License
+This uses the MIT license.
