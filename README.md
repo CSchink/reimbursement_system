@@ -18,6 +18,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 * Employees can submit reimbursements, specifying the type and the amount.
 * Employees can see all of their reimbursements and whether they're approved, pending or denied.
 
+## Usage
 
 ![image](https://user-images.githubusercontent.com/45950072/115905626-58342880-a434-11eb-806f-ad53b5566111.png)
 
