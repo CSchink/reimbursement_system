@@ -57,13 +57,13 @@ Now you may approve or deny those reimbursements.  As you can see, you may selec
 5. Set up a new database in Dbeaver
 6. Right-click on the newly created database and select a new SQL script
 7. Navigate to the SQL file in the newly cloned reimbursement_system file and:
-* Copy and paste file into the new DBeaver SQL script
-* Right-click and select "run" to initialize tables
-* Remember usernames and passwords for logging into the application
+    * Copy and paste file into the new DBeaver SQL script
+    * Right-click and select "run" to initialize tables
+     * Remember usernames and passwords for logging into the application
 9. Store database login credentials in your system environment variables as:
-* Project_One_DB_URL: [AWS_RDS_url]
-* Project_One_DB_username: [DBeaver username]
-* Project_One_DB_password: [AWS_RDS password]
+    * Project_One_DB_URL: [AWS_RDS_url]
+    * Project_One_DB_username: [DBeaver username]
+    * Project_One_DB_password: [AWS_RDS password]
 10. Open up the newly cloned reimbursement_system file in Intellij and run MainDriver.java
 11. Navigate to http://localhost:9001/
 
