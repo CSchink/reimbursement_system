@@ -37,18 +37,18 @@ Now you may approve or deny those reimbursements.
 
 ## Getting Started
 
-First: Open git bash in your desired directory and run the command git clone https://github.com/CSchink/reimbursement_system.git
-Second: Set up an account with AWS RDS
-Third: Download and install DBeaver
-Fourth: Connect AWS RDS with DBeaver
-Fifth: Set up a new database in Dbeaver
-Sixth: Right-click on the newly created database and select a new SQL script
-Seventh: Navigate to the SQL file in the newly cloned reimbursement_system file and:
+* Open git bash in your desired directory and run the command git clone https://github.com/CSchink/reimbursement_system.git
+* Set up an account with AWS RDS
+* Download and install DBeaver
+* Connect AWS RDS with DBeaver
+Set up a new database in Dbeaver
+Right-click on the newly created database and select a new SQL script
+Navigate to the SQL file in the newly cloned reimbursement_system file and:
 * Copy and paste file into the new DBeaver SQL script
 * Right-click and select "run" to initialize tables
 * Remember usernames and passwords for logging into the application
-Seventh: Store database login credentials in your system environment variables as:
-* Project_One_DB_URL: [AWS_RDS_url]
+Store database login credentials in your system environment variables as:
+** Project_One_DB_URL: [AWS_RDS_url]
 * Project_One_DB_username: [DBeaver username]
 * Project_One_DB_password: [AWS_RDS password]
 Eighth: Open up the newly cloned reimbursement_system file in Intellij and run MainDriver.java
