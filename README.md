@@ -20,19 +20,32 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 ## Usage
 
+Upon startup you will see the login screen.
+
+![image](https://user-images.githubusercontent.com/45950072/115905626-58342880-a434-11eb-806f-ad53b5566111.png)
+
 Login as an employee using:
 
 * username: user1
 * password: 1234
 
-Submit multiple reimbursements.  Then, login as an adminsitrator using the following credentials:
+Now you will see the employee dashboard.  You will be able to create a new reimbursement:
+
+![image](https://user-images.githubusercontent.com/45950072/116256664-638f9880-a741-11eb-990a-3bfe29143e71.png)
+
+You will also be able to see all of the reimbursements you submitted and their current status:
+
+![image](https://user-images.githubusercontent.com/45950072/116256767-7d30e000-a741-11eb-82f3-99f595f99691.png)
+
+Now, login as an adminsitrator using the following credentials:
 
 * username: admin
 * password: 1234
 
-Now you may approve or deny those reimbursements.
+Now you may approve or deny those reimbursements.  As you can see, you may select multiple reimbursements (as long as they are pending):
 
-![image](https://user-images.githubusercontent.com/45950072/115905626-58342880-a434-11eb-806f-ad53b5566111.png)
+![image](https://user-images.githubusercontent.com/45950072/116256977-a81b3400-a741-11eb-82c8-876c0ead56f4.png)
+
 
 
 ## Getting Started
