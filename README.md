@@ -55,4 +55,4 @@ Now you may approve or deny those reimbursements.
 11. Navigate to http://localhost:9001/
 
 ## License
-This uses the MIT license.
+This project uses the MIT license.
