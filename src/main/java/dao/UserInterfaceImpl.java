@@ -9,9 +9,9 @@ import java.util.Map;
 
 public class UserInterfaceImpl implements UserDaoInterface {
 
-    public static String url = System.getenv("Project_One_DB_URL");
-    public static String username = System.getenv("Project_One_DB_username");
-    public static String confirmation = System.getenv("Project_One_DB_password");
+    public static String url = "jdbc:postgresql://bootcampone.c7pvo8uwp5jq.us-east-2.rds.amazonaws.com/postgres";
+    public static String username = "postgres";
+    public static String confirmation = "p4ssw0rd";
 
     public static void main(String[] args){
         UserInterfaceImpl n = new UserInterfaceImpl();
